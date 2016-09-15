@@ -1,0 +1,6 @@
+.outputtable td, 
+.outputtable th {
+    font-family: monospace;
+    padding: 2px;
+    text-align: center;
+}

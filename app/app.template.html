@@ -1,0 +1,69 @@
+<div class="container">
+    <div class="row" class="twelve columns">
+        <h3>Buchstaben in Zahlen umwandeln</h3>
+        <p>Nicht erschrecken wenn es hier anders aussieht als sonst. Ich habe mich entschlossen das Blog abzuschalten.<br> Da
+            dieses Tool hier allerdings sehr beliebt ist, gibt es das immer noch. In neuem, schlanken Gewand. Prima für unterwegs!</p>
+
+    </div>
+    <div class="row">
+        <div class="twelve columns">
+            <input class="u-full-width" type="text" [(ngModel)]="word" placeholder="Bitte ein Wort eingeben" (keyup)="onKey($event)">
+        </div>
+    </div>
+    <div class="row">
+        <label>Optionen für A - Z:</label>
+        <div class="twelve columns">
+            <input type="radio" [(ngModel)]="mode" (ngModelChange)="onKey($event)" value="A1">1 - 26
+            <input type="radio" [(ngModel)]="mode" (ngModelChange)="onKey($event)" value="A0">0 - 25
+            <input type="radio" [(ngModel)]="mode" (ngModelChange)="onKey($event)" value="A26">26 - 1
+            <input type="radio" [(ngModel)]="mode" (ngModelChange)="onKey($event)" value="A25">25 - 0
+        </div>
+    </div>
+    <div *ngIf="word.length > 0">
+            <table class="outputtable">
+                <thead>
+                    <tr>
+                        <th *ngFor="let letter of wordAsArray">{{letter}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td *ngFor="let letter of wordsAsNumbers">{{letter}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        <div class="row">
+            <div class="two columns">
+                Addition:
+            </div>
+            <div class="ten columns">
+                {{add}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="two columns">
+                Subtraktion:
+            </div>
+            <div class="ten columns">
+                {{sub}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="two columns">
+                Multiplikation:
+            </div>
+            <div class="ten columns">
+                {{mul}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="two columns">
+                Division:
+            </div>
+            <div class="ten columns">
+                {{div}}
+            </div>
+        </div>
+    </div>
+</div>
