@@ -73,12 +73,12 @@ export class AppComponent {
                 let crossfoot = _.join(digits, ' + ') + ` = ${sum}`;
                 crossfoots.push(crossfoot);                
             }
-            return i === 1 ? ` (QS: ${crossfoots})` : ` (It. QS: ${_.join(crossfoots, '; ')})`; 
+            return i === 1 ? ` (QS: ${crossfoots})` : ` (Iter. QS: ${_.join(crossfoots, '; ')})`; 
         }
     }
 
     calcNumber(char, mode) {
-        if (Number.isSafeInteger(parseInt(char)){
+        if (Number.isSafeInteger(parseInt(char))) {
             return parseInt(char);
         }
         let num;

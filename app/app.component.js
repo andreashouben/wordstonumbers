@@ -77,7 +77,7 @@ var AppComponent = (function () {
                 var crossfoot = _.join(digits, ' + ') + (" = " + sum);
                 crossfoots.push(crossfoot);
             }
-            return i === 1 ? " (QS: " + crossfoots + ")" : " (It. QS: " + _.join(crossfoots, '; ') + ")";
+            return i === 1 ? " (QS: " + crossfoots + ")" : " (Iter. QS: " + _.join(crossfoots, '; ') + ")";
         }
     };
     AppComponent.prototype.calcNumber = function (char, mode) {
