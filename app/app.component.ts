@@ -12,8 +12,8 @@ const modes = {
 
 @Component({
     selector: 'my-app',
-    moduleId: module.id,
-    templateUrl: 'app.template.html'
+    //moduleId: module.id,
+    templateUrl: '/app/app.template.html'
 })
 export class AppComponent {
     word = '';
