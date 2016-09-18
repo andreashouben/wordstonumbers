@@ -4,7 +4,7 @@
   "description": "Small web project to calculate numbers from words",
   "scripts": {
     "start": "webpack-dev-server --inline",
-    "postinstall": "typings install",
+    "postinstall": "typings install && webpack",
     "typings": "typings"
   },
   "repository": {
@@ -44,6 +44,7 @@
   },
   "devDependencies": {
     "concurrently": "^2.2.0",
+    "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.22.0",
     "lite-server": "^2.2.2",
     "node-sass": "^3.10.0",

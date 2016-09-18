@@ -1,15 +1,15 @@
 import {ModuleWithProviders} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
-import {AppComponent} from './app.component';
+import {CalcComponent} from './calc.component';
 
 
 const appRoutes: Routes = [
     {
-        path: '2009/03/25/buchstaben-in-zahlen-umwandeln',
-        redirectTo: '',
-        pathMatch: 'full'
-    }
+        path: '',
+        component: CalcComponent
+    },
+     { path: '**', redirectTo: '' }  
 ]
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

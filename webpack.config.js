@@ -30,6 +30,9 @@ const config = {
         new HtmlWebpackPlugin({
             template: 'index.template.ejs',
             inject: 'body',
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: { warnings: false }
         })
     ]
 };
