@@ -1,7 +1,0 @@
-- name: Setup Node.js environment
-  uses: actions/setup-node@v2.1.4
-  with:
-    node-version: 6.x
-
-- name: Install Dependencies
-  run: npm install
